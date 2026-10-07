@@ -47,9 +47,9 @@ class TestConfigAndBilling(unittest.TestCase):
         """Uji sifat Fail-Fast jika DATABASE_URL tidak diset"""
         os.environ.pop("DATABASE_URL", None)
         os.environ["PAYMENT_API_KEY"] = "token_abc"
-
+    
         with self.assertRaises(ValueError) as ctx:
-            AppSettings.load_from_env()
+            AppSettings.load_from_env(env_file="nonexistent.env")
 
         self.assertIn("DATABASE_URL", str(ctx.exception))
 
