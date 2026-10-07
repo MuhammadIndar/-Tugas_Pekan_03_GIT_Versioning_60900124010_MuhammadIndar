@@ -32,6 +32,7 @@ contoh_kode_pekan_5/
 Uji apakah repositori Anda dapat direplikasi oleh rekan tim tanpa galat:
 
 ### Langkah 1: Siapkan Konfigurasi Lingkungan Lokal
+
 Salin template konfigurasi publik ke berkas `.env` lokal:
 
 ```bash
@@ -43,6 +44,7 @@ cp .env.example .env
 ```
 
 ### Langkah 2: Jalankan Unit Test Suite
+
 Pastikan seluruh pengujian lulus:
 
 ```bash
@@ -50,6 +52,7 @@ py -m unittest tests/test_config_and_billing.py
 ```
 
 ### Langkah 3: Jalankan Audit Keterlacakan Otomatis
+
 Jalankan skrip audit mandiri untuk mendapatkan skor 100/100:
 
 ```bash
@@ -63,6 +66,7 @@ py scripts/verify_reproducibility.py
 Gunakan standar ini saat mengerjakan tugas mandiri/kelompok:
 
 ### 1. Format Conventional Commits
+
 ```bash
 git commit -m "feat(billing): tambah validasi payment api key fail-fast"
 git commit -m "test(config): tambah test case invalid port"
@@ -70,6 +74,7 @@ git commit -m "chore(deps): perbarui batasan versi pydantic di pyproject.toml"
 ```
 
 ### 2. Percabangan Fitur (Feature Branch)
+
 ```bash
 # Buat branch baru untuk fitur diskon
 git checkout -b feat/tahfidz-discount
@@ -79,6 +84,7 @@ git push origin feat/tahfidz-discount
 ```
 
 ### 3. Pemberian Tag Rilis (Semantic Versioning)
+
 ```bash
 # Berikan tag beranotasi pada rilis v1.0.0
 git tag -a v1.0.0 -m "Release v1.0.0: Initial reproducible release"
